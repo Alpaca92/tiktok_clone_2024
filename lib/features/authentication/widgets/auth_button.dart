@@ -11,8 +11,10 @@ class AuthButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.icon,
-    required this.onTap,
+    this.onTap = _defaultOnTap,
   });
+
+  static void _defaultOnTap() {}
 
   @override
   Widget build(BuildContext context) {
