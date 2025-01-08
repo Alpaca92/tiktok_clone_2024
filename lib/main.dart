@@ -13,8 +13,9 @@ class TikTokApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE9435A)),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE9435A)),
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: SignUpScreen(),
     );
