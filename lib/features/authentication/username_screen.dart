@@ -11,13 +11,16 @@ class UsernameScreen extends StatefulWidget {
 
 class _UsernameScreenState extends State<UsernameScreen> {
   final TextEditingController _usernameController = TextEditingController();
+  String _username = '';
 
   @override
   void initState() {
     super.initState();
 
     _usernameController.addListener(() {
-      setState(() {});
+      setState(() {
+        _username = _usernameController.text;
+      });
     });
   }
 
@@ -72,9 +75,13 @@ class _UsernameScreenState extends State<UsernameScreen> {
             Gaps.v16,
             FractionallySizedBox(
               widthFactor: 1,
-              child: Container(
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+                  borderRadius: BorderRadius.circular(Sizes.size5),
+                  color: _username.isEmpty
+                      ? Colors.grey.shade300
+                      : Theme.of(context).primaryColor,
                 ),
                 child: TextButton(
                   onPressed: () => {},
