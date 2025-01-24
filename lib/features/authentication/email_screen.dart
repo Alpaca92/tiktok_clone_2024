@@ -24,7 +24,7 @@ class _EmailScreenState extends State<EmailScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => PasswordScreen(),
+        builder: (context) => const PasswordScreen(),
       ),
     );
   }
@@ -62,7 +62,7 @@ class _EmailScreenState extends State<EmailScreen> {
       onTap: _onScaffoldTap,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Sign up',
           ),
         ),
@@ -74,7 +74,7 @@ class _EmailScreenState extends State<EmailScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Gaps.v40,
-              Text(
+              const Text(
                 'What is your enmail?',
                 style: TextStyle(
                   fontSize: Sizes.size24,

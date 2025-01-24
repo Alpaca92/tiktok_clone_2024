@@ -18,7 +18,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
   void _onNextTap() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => EmailScreen(),
+        builder: (context) => const EmailScreen(),
       ),
     );
   }
@@ -43,7 +43,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Sign up',
         ),
       ),
@@ -55,7 +55,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Gaps.v40,
-            Text(
+            const Text(
               'Create username',
               style: TextStyle(
                 fontSize: Sizes.size24,
@@ -63,7 +63,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               ),
             ),
             Gaps.v8,
-            Text(
+            const Text(
               'You can always change this later.',
               style: TextStyle(
                 color: Colors.black54,

@@ -32,7 +32,7 @@ class FormButton extends StatelessWidget {
               color: disabled ? Colors.grey.shade400 : Colors.white,
               fontWeight: FontWeight.w600,
             ),
-            child: Text(
+            child: const Text(
               'Next',
               textAlign: TextAlign.center,
             ),

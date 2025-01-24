@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: const SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: Sizes.size40,
@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Don\'t have an account?'),
+              const Text('Don\'t have an account?'),
               Gaps.h5,
               GestureDetector(
                 onTap: () => onSignUpTap(context),
