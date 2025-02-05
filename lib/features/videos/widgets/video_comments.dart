@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
 class VideoComments extends StatefulWidget {
@@ -34,10 +35,75 @@ class _VideoCommentsState extends State<VideoComments> {
           ],
           title: const Text('22796 comments'),
         ),
-        body: ListView.builder(
+        body: ListView.separated(
+          padding: const EdgeInsets.symmetric(
+            vertical: Sizes.size10,
+            horizontal: Sizes.size16,
+          ),
           itemCount: 10,
-          itemBuilder: (context, index) => Container(
-            child: const Text('i am a comment'),
+          separatorBuilder: (context, index) => Gaps.v20,
+          itemBuilder: (context, index) => Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const CircleAvatar(
+                radius: 24,
+                child: Text('ayaan'),
+              ),
+              Gaps.h10,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'nico',
+                      style: TextStyle(
+                        fontSize: Sizes.size14,
+                        color: Colors.grey.shade500,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Gaps.v3,
+                    Text(
+                      'That\'s not it l\'ve seen the same thing but also in a cave',
+                      style: TextStyle(
+                        fontSize: Sizes.size14,
+                        color: Colors.grey.shade500,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Gaps.h10,
+              Column(children: [
+                FaIcon(
+                  FontAwesomeIcons.heart,
+                  size: Sizes.size20,
+                  color: Colors.grey.shade500,
+                ),
+                Gaps.v2,
+                Text(
+                  '52.2k',
+                  style: TextStyle(
+                    fontSize: Sizes.size14,
+                    color: Colors.grey.shade500,
+                  ),
+                ),
+              ])
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 24,
+                backgroundColor: Colors.grey.shade300,
+                foregroundColor: Colors.white,
+                child: const Text('ayaan'),
+              ),
+            ],
           ),
         ),
       ),
