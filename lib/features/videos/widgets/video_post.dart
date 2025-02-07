@@ -14,6 +14,7 @@ class VideoPostScreen extends StatelessWidget {
 
     await showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       backgroundColor: Colors.transparent,
       builder: (context) => const VideoComments(),
     );
@@ -24,6 +25,7 @@ class VideoPostScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: GestureDetector(
           onTap: () => _onCommentsTap(context),
