@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/videos/widgets/video_post.dart';
+import 'package:tiktok_clone/features/discover/discover_screen.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -32,7 +32,7 @@ class TikTokApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const VideoPostScreen(), // TEMP: Replace with SignUpScreen()
+      home: const DiscoverScreen(), // TEMP: Replace with SignUpScreen()
     );
   }
 }
